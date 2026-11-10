@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Perjalanan Hidup Saya - Yigal Amiel Benggu</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body{background:#d7ccc8;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#4e342e}
+.siakad-header{background:linear-gradient(135deg,#5d4037,#4e342e);color:#fff;padding:30px 20px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.header-logo{width:90px;height:90px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;border:4px solid #ffcc80;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.header-title{font-size:1.1rem;font-weight:600;letter-spacing:.5px;line-height:1.4}
+.btn-header-action{background:rgba(255,255,255,.1);border:none;color:#fff;padding:12px;border-radius:10px;font-size:.9rem;backdrop-filter:blur(5px);transition:all .2s;width:100%;display:flex;flex-direction:column;align-items:center}
+.btn-header-action:hover{background:rgba(255,255,255,.2);color:#fff}
+.section-title{font-size:1.4rem;font-weight:700;color:#3e2723;margin:25px 0 15px}
+.modul-card{background:#fff;border-radius:15px;padding:25px 20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;cursor:pointer;display:block;color:inherit}
+.modul-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.modul-icon{font-size:2.5rem;margin-bottom:12px}
+.modul-name{font-size:1.05rem;font-weight:600;color:#4e342e}
+.modal-content{border-radius:20px;border:none;background:#fdfbfa}
+.modal-header{background:#5d4037;color:#fff;border-top-left-radius:20px;border-top-right-radius:20px}
+.btn-close-white{filter:invert(1) grayscale(100%) brightness(200%)}
+.foto-profil{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.foto-besar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #8d6e63;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.card-cover{width:100%;height:120px;display:block;border-radius:10px;margin-bottom:14px}
+.modal-banner{height:130px;position:relative;overflow:hidden}
+.modal-banner svg{position:absolute;inset:0;width:100%;height:100%}
+.list-group-item{background:transparent;color:#4e342e}
+.tag{display:inline-block;background:#efebe9;color:#4e342e;border-radius:20px;padding:4px 12px;margin:3px;font-size:.85rem}
+
+.nama-besar{font-size:2rem;font-weight:800;color:#fff;letter-spacing:.5px;margin:6px 0 2px;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.sub-nama{color:#ffcc80;font-weight:600;font-size:.95rem}
+.chip{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:20px;padding:5px 14px;margin:3px;font-size:.8rem}
+.container{max-width:1100px}
+.modul-card{height:100%;border-bottom:5px solid var(--ac,#8d6e63)}
+.modul-card .modul-icon{color:var(--ac)!important}
+.modul-desc{font-size:.8rem;color:#8d6e63;margin-top:4px}
+.banner-nama{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 8px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:.8rem;font-weight:600;text-align:center;letter-spacing:.4px}
+.modal-title small{display:block;font-weight:400;font-size:.72rem;opacity:.8}
+.profil-cover{height:120px;background:linear-gradient(135deg,#8d6e63,#3e2723);position:relative}
+.profil-foto-wrap{margin-top:-65px;text-align:center}
+.profil-foto-wrap .foto-besar{width:130px;height:130px;border:5px solid #fff}
+.stat{background:#efebe9;border-radius:12px;padding:10px 4px;text-align:center}
+.stat b{display:block;font-size:1.1rem;color:#5d4037}.stat span{font-size:.7rem;color:#8d6e63}
+.info-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #efebe9;font-size:.88rem}
+.info-row i{width:22px;color:#8d6e63;margin-top:3px;text-align:center}
+.info-row small{display:block;color:#8d6e63;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px}
+@media(min-width:768px){.nama-besar{font-size:2.6rem}}
+</style>
+<script>
+const AVATAR='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffcc80"/><stop offset="1" stop-color="#8d6e63"/></linearGradient></defs><rect width="200" height="200" fill="url(#g)"/><circle cx="100" cy="78" r="38" fill="#fff3e0"/><path d="M60 74c0-30 20-44 42-44s38 14 38 40c-8-14-22-20-40-20s-30 8-40 24z" fill="#4e342e"/><path d="M28 200c4-46 34-70 72-70s68 24 72 70z" fill="#5d4037"/><path d="M84 134l16 22 16-22z" fill="#fff3e0"/><circle cx="87" cy="80" r="4" fill="#4e342e"/><circle cx="113" cy="80" r="4" fill="#4e342e"/><path d="M88 95q12 10 24 0" stroke="#8d6e63" stroke-width="4" fill="none" stroke-linecap="round"/></svg>');
+function pasangFoto(){document.querySelectorAll('img.foto').forEach(i=>{i.onerror=function(){this.onerror=null;this.src=AVATAR};i.src='foto-saya.jpg'})}
+document.addEventListener('DOMContentLoaded',pasangFoto);
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="sc-biodata" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-biodata" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a1887f"/><stop offset="1" stop-color="#4e342e"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-biodata)"/><circle cx="40" cy="20" r="60" fill="#fff" opacity=".1"/><circle cx="380" cy="130" r="70" fill="#fff" opacity=".1"/><rect x="110" y="25" width="180" height="95" rx="12" fill="#fff8f0"/><circle cx="150" cy="62" r="20" fill="#8d6e63"/><circle cx="150" cy="56" r="8" fill="#ffe0b2"/><path d="M134 80q16-14 32 0v8h-32z" fill="#ffe0b2"/><rect x="185" y="48" width="90" height="8" rx="4" fill="#bcaaa4"/><rect x="185" y="66" width="70" height="8" rx="4" fill="#d7ccc8"/><rect x="185" y="84" width="80" height="8" rx="4" fill="#d7ccc8"/><rect x="130" y="100" width="140" height="6" rx="3" fill="#ffcc80"/></symbol>
+<symbol id="sc-keseharian" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-keseharian" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb74d"/><stop offset="1" stop-color="#6d4c41"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-keseharian)"/><circle cx="40" cy="20" r="60" fill="#fff" opacity=".1"/><circle cx="310" cy="45" r="26" fill="#fff59d"/><path d="M0 140V105q60-40 120-10t130-5 150 20v30z" fill="#5d4037" opacity=".85"/><circle cx="130" cy="62" r="34" fill="#fff8f0"/><circle cx="130" cy="62" r="30" fill="none" stroke="#8d6e63" stroke-width="4"/><path d="M130 62V42M130 62l14 8" stroke="#4e342e" stroke-width="4" stroke-linecap="round"/></symbol>
+<symbol id="sc-hobi" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-hobi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4db6ac"/><stop offset="1" stop-color="#004d40"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-hobi)"/><circle cx="380" cy="130" r="70" fill="#fff" opacity=".1"/><rect x="120" y="42" width="160" height="62" rx="31" fill="#263238"/><rect x="146" y="64" width="30" height="9" rx="3" fill="#80cbc4"/><rect x="157" y="53" width="9" height="30" rx="3" fill="#80cbc4"/><circle cx="238" cy="60" r="8" fill="#ff8a65"/><circle cx="256" cy="74" r="8" fill="#ffd54f"/><circle cx="220" cy="74" r="8" fill="#81d4fa"/><path d="M300 30l4 9 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#fff59d"/></symbol>
+<symbol id="sc-cita" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-cita" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a65"/><stop offset="1" stop-color="#4a148c"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-cita)"/><circle cx="60" cy="30" r="2.5" fill="#fff"/><circle cx="120" cy="18" r="2" fill="#fff"/><circle cx="330" cy="28" r="3" fill="#fff"/><path d="M0 140v-25q70-25 140 0t140-5 120 10v20z" fill="#3e2723"/><g transform="rotate(35 200 70)"><path d="M200 18c18 18 22 50 14 72h-28c-8-22-4-54 14-72z" fill="#fff8f0"/><circle cx="200" cy="55" r="8" fill="#4fc3f7"/><path d="M186 90l-14 18 16-6zM214 90l14 18-16-6z" fill="#e64a19"/><path d="M192 94h16l-8 28z" fill="#ffca28"/></g></symbol>
+<symbol id="sc-organisasi" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-organisasi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7986cb"/><stop offset="1" stop-color="#1a237e"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-organisasi)"/><circle cx="40" cy="20" r="60" fill="#fff" opacity=".1"/><circle cx="380" cy="130" r="70" fill="#fff" opacity=".1"/><path d="M200 60L130 100M200 60L270 100M130 100H270" stroke="#fff8e1" stroke-width="4"/><circle cx="200" cy="50" r="22" fill="#ffca28"/><circle cx="130" cy="100" r="18" fill="#fff8f0"/><circle cx="270" cy="100" r="18" fill="#fff8f0"/></symbol>
+<symbol id="sc-motivasi" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-motivasi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd54f"/><stop offset="1" stop-color="#e65100"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-motivasi)"/><g stroke="#fff8e1" stroke-width="5" stroke-linecap="round"><path d="M200 12v16M148 32l11 11M252 32l-11 11M124 78h16M260 78h16"/></g><path d="M200 38c-26 0-42 18-42 40 0 16 9 24 16 34h52c7-10 16-18 16-34 0-22-16-40-42-40z" fill="#fff8e1"/><rect x="176" y="114" width="48" height="8" rx="4" fill="#8d6e63"/><rect x="182" y="124" width="36" height="8" rx="4" fill="#6d4c41"/><path d="M188 96l12-22 12 22" stroke="#ffb300" stroke-width="4" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="sc-kendala" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-kendala" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ef9a9a"/><stop offset="1" stop-color="#7f0000"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-kendala)"/><rect x="120" y="36" width="160" height="82" rx="8" fill="#37474f"/><rect x="130" y="45" width="140" height="64" rx="4" fill="#eceff1"/><path d="M60 122h280l-16 12H76z" fill="#263238"/><path d="M200 52l32 50h-64z" fill="#ffca28"/><rect x="197" y="66" width="6" height="20" rx="3" fill="#4e342e"/><circle cx="200" cy="94" r="3.5" fill="#4e342e"/></symbol>
+<symbol id="sc-penghargaan" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg-penghargaan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe082"/><stop offset="1" stop-color="#e65100"/></linearGradient></defs><rect width="400" height="140" fill="url(#bg-penghargaan)"/><path d="M168 30h64v40c0 22-14 34-32 34s-32-12-32-34z" fill="#ffca28"/><path d="M168 38h-22c0 22 8 34 26 36M232 38h22c0 22-8 34-26 36" stroke="#ffb300" stroke-width="6" fill="none"/><rect x="190" y="102" width="20" height="14" fill="#ffb300"/><rect x="170" y="116" width="60" height="12" rx="4" fill="#6d4c41"/><path d="M200 44l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2z" fill="#fff8e1"/></symbol>
+</svg>
+
+<div class="container-fluid p-0">
+  <div class="siakad-header text-center">
+    <div class="d-flex justify-content-center mb-3"><div class="header-logo"><img class="foto foto-profil" alt="Foto profil"></div></div>
+    <div class="header-title px-2">Sistem Informasi Pengalaman Hidup Saya<br><span class="fw-bold text-warning">PORTOFOLIO PERJALANAN HIDUP SAYA</span></div>
+    <div class="nama-besar">YIGAL AMIEL BENGGU</div>
+    <div class="sub-nama mb-2">NIM 255211036</div>
+    <div class="mb-4"><span class="chip"><i class="fa-solid fa-laptop-code me-1"></i>Informatika</span><span class="chip"><i class="fa-solid fa-building-columns me-1"></i>UNU Al-Ghazali Cilacap</span><span class="chip"><i class="fa-solid fa-location-dot me-1"></i>Kaimana, Papua Barat</span></div>
+    <div class="row g-2 px-3 justify-content-center" style="max-width:400px;margin:0 auto">
+      <div class="col-6"><button class="btn-header-action" data-bs-toggle="modal" data-bs-target="#modalUtamaProfil"><i class="fa-solid fa-user-circle mb-1 fs-5"></i>Halaman Profil</button></div>
+      <div class="col-6"><button class="btn-header-action" onclick="alert('Terima kasih telah berkunjung ke SIAKAD hidup saya!')"><i class="fa-solid fa-right-from-bracket mb-1 fs-5"></i>Keluar</button></div>
+    </div>
+  </div>
+
+  <div class="container px-4 pb-5">
+    <h2 class="section-title">Daftar Modul</h2>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalBiodata" style="--ac:#8d6e63"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-biodata"/></svg><i class="fa-solid fa-address-card modul-icon" style="color:#8d6e63"></i><div class="modul-name">Biodata Diri Saya</div><div class="modul-desc">Data diri, kampus &amp; asal daerah</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalKeseharian" style="--ac:#ef6c00"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-keseharian"/></svg><i class="fa-solid fa-calendar-day modul-icon" style="color:#a1887f"></i><div class="modul-name">Keseharian Saya</div><div class="modul-desc">Rutinitas dari pagi sampai malam</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalOrganisasi" style="--ac:#3949ab"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-organisasi"/></svg><i class="fa-solid fa-people-group modul-icon" style="color:#3949ab"></i><div class="modul-name">Organisasi Internal &amp; Eksternal</div><div class="modul-desc">Aktif di dalam &amp; luar kampus</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalHobi" style="--ac:#00897b"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-hobi"/></svg><i class="fa-solid fa-gamepad modul-icon" style="color:#bcaaa4"></i><div class="modul-name">Hobi &amp; Kegemaran</div><div class="modul-desc">Kegemaran di waktu luang</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalCitaCita" style="--ac:#d84315"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-cita"/></svg><i class="fa-solid fa-rocket modul-icon" style="color:#d84315"></i><div class="modul-name">Cita - Cita &amp; Target</div><div class="modul-desc">Mimpi &amp; target ke depan</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalMotivasi" style="--ac:#f9a825"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-motivasi"/></svg><i class="fa-solid fa-lightbulb modul-icon" style="color:#ffb300"></i><div class="modul-name">Motivasi Saya</div><div class="modul-desc">Alasan saya terus melangkah</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalPenghargaan" style="--ac:#c9a227"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-penghargaan"/></svg><i class="fa-solid fa-trophy modul-icon" style="color:#f9a825"></i><div class="modul-name">Penghargaan Saya</div><div class="modul-desc">Pencapaian &amp; kebanggaan</div></div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="modul-card" data-bs-toggle="modal" data-bs-target="#modalKendala" style="--ac:#c62828"><svg class="card-cover" viewBox="0 0 400 140"><use href="#sc-kendala"/></svg><i class="fa-solid fa-triangle-exclamation modul-icon" style="color:#c62828"></i><div class="modul-name">Kendala Pembuatan Web</div><div class="modul-desc">Tantangan saat membuat web</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFIL -->
+<div class="modal fade" id="modalUtamaProfil" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content" style="overflow:hidden">
+  <div class="profil-cover"><button type="button" class="btn-close btn-close-white m-3 position-absolute end-0" data-bs-dismiss="modal"></button></div>
+  <div class="profil-foto-wrap"><img class="foto foto-besar" alt="Foto profil"></div>
+  <div class="modal-body px-4 pb-4 pt-2">
+    <div class="text-center mb-3">
+      <h4 class="fw-bold mb-0">Yigal Amiel Benggu</h4>
+      <div class="text-muted small">Mahasiswa Informatika</div>
+      <span class="badge bg-success mt-2">Mahasiswa Aktif</span> <span class="badge bg-primary mt-2">Aktivis Organisasi</span>
+    </div>
+    <div class="row g-2 mb-3">
+      <div class="col-4"><div class="stat"><b>255211036</b><span>NIM</span></div></div>
+      <div class="col-4"><div class="stat"><b>2</b><span>Jenis Organisasi</span></div></div>
+      <div class="col-4"><div class="stat"><b>Papua</b><span>Barat</span></div></div>
+    </div>
+    <div class="info-row"><i class="fa-solid fa-building-columns"></i><div><small>Kampus</small>Universitas Nahdlatul Ulama Al-Ghazali Cilacap</div></div>
+    <div class="info-row"><i class="fa-solid fa-laptop-code"></i><div><small>Program Studi</small>Informatika</div></div>
+    <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><small>Asal Daerah</small>Kaimana, Papua Barat</div></div>
+    <div class="info-row"><i class="fa-solid fa-people-group"></i><div><small>Organisasi</small>Internal kampus &amp; eksternal</div></div>
+    <div class="info-row" style="border:0"><i class="fa-solid fa-quote-left"></i><div><small>Moto</small>Tekun, belajar tanpa henti, pantang menyerah.</div></div>
+    <div class="alert alert-secondary small mt-3 mb-0 text-center" style="background:#efebe9;color:#4e342e;border:none">Status Sistem: Aktif Bertumbuh Di Universitas Semesta</div>
+  </div></div></div></div>
+
+<!-- BIODATA -->
+<div class="modal fade" id="modalBiodata" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
+  <div class="modal-header"><h5 class="modal-title fw-bold"><i class="fa-solid fa-id-card me-2"></i>Biodata Diri</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+  <div class="modal-banner"><svg viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice"><use href="#sc-biodata"/></svg><div class="banner-nama">Yigal Amiel Benggu • 255211036</div></div>
+  <div class="modal-body p-4">
+    <div class="text-center mb-3"><img class="foto foto-besar" alt="Foto profil"></div>
+    <table class="table table-striped table-hover small m-0">
+      <tr><td><strong>Nama Lengkap</strong></td><td>Yigal Amiel Benggu</td></tr>
+      <tr><td><strong>NIM</strong></td><td>255211036</td></tr>
+      <tr><td><strong>Asal Kampus</strong></td><td>Universitas Nahdlatul Ulama Al-Ghazali Cilacap</td></tr>
+      <tr><td><strong>Program Studi</strong></td><td>Informatika</td></tr>
+      <tr><td><strong>Asal Daerah</strong></td><td>Kaimana, Papua Barat</td></tr>
+      <tr><td><strong>Status Hidup</strong></td><td><span class="badge bg-success">Mahasiswa Aktif</span> <span class="badge bg-warning text-dark">Perantau</span> <span class="badge bg-primary">Aktivis Organisasi</span></td></tr>
+      <tr><td><strong>Karakter Utama</strong></td><td>Tekun, Senang Belajar, Pantang Menyerah, Mudah Bergaul</td></tr>
+    </table>
+  </div></div></div></div>
+
+<!-- KESEHARIAN -->
+<div class="modal fade" id="modalKeseharian" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
+  <div class="modal-header"><h5 class="modal-title fw
